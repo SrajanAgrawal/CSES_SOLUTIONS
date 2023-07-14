@@ -1,0 +1,33 @@
+
+/* Starter template is available in the first question (Weird Algorithm)*/
+
+// 1st Approach ( XOR )
+
+void solve(){
+  long long n;
+  cin>>n;
+  long long xor_n = n , xor_ = 0;
+  for(int i=1;i<n;i++){
+    int a;
+    cin>>a;
+    xor_ ^= a;
+    xor_n ^= i;
+  }
+  cout << (xor_n ^ xor_) << " ";
+  
+}   
+
+// 2nd Approach (SUM) 
+void solve(){
+  long long n;
+  cin>>n;
+  long long sum_n = n , sum = 0;
+  for(int i=1;i<n;i++){
+    int a;
+    cin>>a;
+    sum += a;
+    sum_n += i;
+  }
+  cout << (sum_n ^ sum) << " ";
+  
+}  
